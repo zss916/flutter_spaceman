@@ -20,7 +20,7 @@ class _FrameRateViewState extends State<FrameRateView> {
     WidgetsBinding? widgetsBinding = WidgetsBinding.instance;
     // 第一帧的回调
     widgetsBinding?.addPostFrameCallback((callback) {
-      Timer.periodic(Duration(seconds: 1), (timer) {
+      Timer.periodic(const Duration(seconds: 1), (timer) {
         // 1秒计算一次帧率
         if (mounted) {
           setState(() {
